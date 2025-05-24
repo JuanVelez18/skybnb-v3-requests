@@ -1,0 +1,39 @@
+meta {
+  name: Register Guest
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{host}}/auth/register/guest
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "dni": "55555555555",
+    "email": "juanes.guest4@gmail.com",
+    "firstName": "Jhon",
+    "lastName": "Doe",
+    "password": "Contrasenia12345*",
+    "Birthday": "2000-06-18",
+    "CountryId": 1,
+    "Phone": "32175945478",
+    "Address": {
+      "Street": "Calle",
+      "StreetNumber": 41,
+      "IntersectionNumber": 27,
+      "DoorNumber": 32,
+      "CityId": 2,
+      "Complement": "Apto 302"
+    }
+  }
+}
+
+script:post-response {
+  bru.setVar("accessToken", res.body.accessToken)
+  bru.setVar("refreshToken", res.body.refreshToken)
+  bru.setVar("email", req.body.email)
+  bru.setVar("password", req.body.password)
+}
