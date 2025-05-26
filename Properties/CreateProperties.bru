@@ -1,0 +1,31 @@
+meta {
+  name: CreateProperties
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{host}}/properties
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {    "Title": "Loft",
+      "TypeId": 1,
+      "NumBeds": 2,
+      "MaxGuests": 3,
+      "Description": "Loft con vista al parque",
+      "NumBedrooms": 2,
+      "NumBathrooms": 1,
+      "BasePricePerNight": 100000,
+      "Address": {
+          "Street": "Calle",
+          "StreetNumber": 41,
+          "IntersectionNumber": 27,
+          "DoorNumber": 32,
+          "CityId": 2,
+          "Complement": "Apto 302"
+        }
+  }
+}
