@@ -11,21 +11,39 @@ post {
 }
 
 body:json {
-  {    "Title": "Loft",
-      "TypeId": 1,
-      "NumBeds": 2,
-      "MaxGuests": 3,
-      "Description": "Loft con vista al parque",
-      "NumBedrooms": 2,
-      "NumBathrooms": 1,
-      "BasePricePerNight": 100000,
-      "Address": {
-          "Street": "Calle",
-          "StreetNumber": 41,
-          "IntersectionNumber": 27,
-          "DoorNumber": 32,
-          "CityId": 2,
-          "Complement": "Apto 302"
-        }
+  {
+    "Title": "Casa de verano",
+    "TypeId": 2,
+    "NumBeds": 3,
+    "MaxGuests": 5,
+    "Description": "Hermosa casa de verano con piscina y vista al mar.",
+    "NumBedrooms": 3,
+    "NumBathrooms": 2,
+    "BasePricePerNight": 75,
+    "Address": {
+      "Street": "Avenida El Cairo",
+      "StreetNumber": 45,
+      "IntersectionNumber": 7,
+      "DoorNumber": 1,
+      "CityId": 2,
+      "Complement": ""
+    },
+    "Multimedia": [
+      {
+        "Url": "https://firebasestorage.googleapis.com/v0/b/prueba-skybnb-universidad/o/image%2Fc864acd4-204e-4ec1-916e-7138f66a39ee?alt=media&token=351e6267-64ed-447a-8e9a-1109c9abc067",
+        "Type": "image",
+        "Order": 1
+      },
+      {
+        "Url": "https://firebasestorage.googleapis.com/v0/b/prueba-skybnb-universidad/o/image%2F4bfeae08-7d90-4632-b69f-1ca15c3077a0?alt=media&token=1fdb8fd5-dcae-49d5-a8c0-0629f99c237b",
+        "Type": "image",
+        "Order": 2
+      },
+      {
+        "Url": "https://firebasestorage.googleapis.com/v0/b/prueba-skybnb-universidad/o/image%2F7be2759f-f2e7-4f1e-8c03-0ef8cee98e61?alt=media&token=857f1d83-cbbc-4df7-affd-fdc6dab2b8c4",
+        "Type": "image",
+        "Order": 3
+      }
+    ]
   }
 }
