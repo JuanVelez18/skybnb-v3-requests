@@ -5,21 +5,23 @@ meta {
 }
 
 get {
-  url: {{host}}/properties?Types=1&Types=2&SortBy=price-low
+  url: {{host}}/properties?page=1&pageSize=10&MinPrice=0&MaxPrice=500&Guests=1&SortBy=newest
   body: none
   auth: none
 }
 
 params:query {
-  Types: 1
-  Types: 2
-  SortBy: price-low
+  page: 1
+  pageSize: 10
+  MinPrice: 0
+  MaxPrice: 500
+  Guests: 1
+  SortBy: newest
+  ~Types: 1
+  ~Types: 2
   ~Bathrooms: 3
   ~Bedrooms: 5
   ~CheckIn: 2025-06-13
   ~CheckOut: 2025-06-15
-  ~Guests: 2
-  ~MinPrice: 80
   ~Location: Barranquilla
-  ~MaxPrice: 200
 }
