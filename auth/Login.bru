@@ -17,6 +17,20 @@ body:json {
   }
 }
 
+script:pre-request {
+  const email = req.body.email !== '{{email}}' ? req.body.email : 'host.test+2@yopmail.com';
+  
+  const password = req.body.password !== '{{password}}'
+    ? req.body.password
+    : 'Contrasenia12345*';
+  
+  req.setBody({
+    ...req.body,
+    email,
+    password
+  })
+}
+
 script:post-response {
   bru.setVar("accessToken", res.body.accessToken)
   bru.setVar("refreshToken", res.body.refreshToken)
