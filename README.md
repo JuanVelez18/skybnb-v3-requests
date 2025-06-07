@@ -4,6 +4,8 @@
 
 ## Como ejecutar el proyecto
 
+- Asegúrate de tener el servicio de Skybnb corriendo en tu máquina local.
+
 - Clona el repositorio:
 
 ```bash
@@ -16,4 +18,4 @@ git clone https://github.com/JuanVelez18/skybnb-v3-requests
 pwd
 ```
 
-- Abre Bruno y carga una colección existente desde la carpeta clonada:
+- Abre Bruno y carga una colección existente desde la carpeta clonada.
